@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'osp66%n6g#al8qtgx2&kj4hp9@#!+--k^0i^7o9nu^tr5zfrzb'
+SECRET_KEY = '10u4cmwd^8w!8%5m#+7v=^#ncr4#mm)9n7$$#k8vdsp)-*9sg3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Clientes.apps.ClientesConfig',
+    #'productos.apps.ProductosConfig',
+    'clientes.apps.ClientesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,14 +75,25 @@ WSGI_APPLICATION = 'Tienda.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.psycopg2' ,
+        'NAME': 'tienda',
+        'USER': 'postgres',
+        'PASSWORD': 'unicesmag',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+'''
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
